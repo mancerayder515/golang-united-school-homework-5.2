@@ -26,7 +26,7 @@ func (c *Cache) Put(key, value string) {
 
 func (c *Cache) Keys() []string {
 	c.clean()
-	keys := make([]string, len(c.data))
+	var keys []string
 	for k, _ := range c.data {
 		keys = append(keys, k)
 	}
